@@ -111,6 +111,11 @@ DeviceNetworkEvents
 - **Action:** File download detected.
 - **File Path:** `C:\Users\ile_vm\Downloads\tor-browser-windows-x86_64-portable-14.5.3.exe`
 
+| Timestamp                      | Action      | Event                              | Command | Filepath                                                                 | AdditionalInfo |
+|--------------------------------|-------------|------------------------------------|---------|--------------------------------------------------------------------------|----------------|
+| 2025-06-02T19:37:39.6713949Z   | FileRenamed | Tor installer moved to Downloads   |         | `C:\Users\ile_vm\Downloads\tor-browser-windows-x86_64-portable-14.5.3.exe` |                |
+
+
 ### 2. Process Execution - TOR Browser Installation
 
 - **Timestamp:** `2025-06-02T19:39:57.6058331Z`
@@ -119,12 +124,25 @@ DeviceNetworkEvents
 - **Command:** `tor-browser-windows-x86_64-portable-14.5.3.exe /S`
 - **File Path:** `C:\Users\ile_vm\Downloads\tor-browser-windows-x86_64-portable-14.5.3.exe`
 
+
+| Timestamp                      | Action         | Event                          | Command                                                                         | Filepath                                                                 | AdditionalInfo |
+|--------------------------------|----------------|--------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------|----------------|
+| 2025-06-02T19:39:57.6058331Z   | ProcessCreated | Silent install of Tor Browser  | `"C:\Users\ile_vm\Downloads\tor-browser-windows-x86_64-portable-14.5.3.exe /S"` | `C:\Users\ile_vm\Downloads\tor-browser-windows-x86_64-portable-14.5.3.exe` |                |
+
+
 ### 3. Process Execution - TOR Browser Launch
 
 - **Timestamp:** `2025-06-02T19:40:52.1230000Z`
 - **Event:** User "ile_vm" opened the TOR browser. Subsequent processes associated with TOR browser, such as `firefox.exe` and `tor.exe`, were also created, indicating that the browser launched successfully.
 - **Action:** Process creation of TOR browser-related executables detected.
 - **File Path:** `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`
+- 
+
+| Timestamp                      | Action         | Event                                    | Command                                                         | Filepath                                                                                         | AdditionalInfo |
+|--------------------------------|----------------|------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------|----------------|
+| 2025-06-02T19:40:48.0832459Z   | ProcessCreated | Launched Tor Browser                     | `"C:\Users\ile_vm\Desktop\Tor Browser\Browser\firefox.exe"`     | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\firefox.exe`                                         |                |
+| 2025-06-02T19:40:51.9230000Z   | ProcessCreated | Spawned Tor Browser subprocesses (tabs, GPU, utility) |                                                                 | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\firefox.exe`                                         |                |
+| 2025-06-02T19:40:52.1230000Z   | ProcessCreated | Started Tor daemon                       | `"C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe --defaults-torrc ..."` | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                         |                |
 
 ### 4. Network Connection - TOR Network
 
@@ -134,6 +152,12 @@ DeviceNetworkEvents
 - **Process:** `tor.exe`
 - **File Path:** `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`
 
+
+| Timestamp                      | Action            | Event                  | Command | Filepath                                                                                                 | AdditionalInfo                                            |
+|--------------------------------|-------------------|------------------------|---------|----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| 2025-06-02T19:41:05.6328746Z   | ConnectionSuccess | Tor relay connection   |         | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                                | RemoteIP = 92.60.37.143:9001                              |
+| 2025-06-02T19:42:13.8842030Z   | ConnectionSuccess | Tor relay connection   |         | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                                | RemoteIP = 176.9.39.196:9001; RemoteURL = `https://www.fs5ld3x5rz4.com` |
+
 ### 5. Additional Network Connections - TOR Browser Activity
 
 - **Timestamps:**
@@ -142,41 +166,6 @@ DeviceNetworkEvents
 - **Event:** Additional TOR network connections were established, indicating ongoing activity by user "ile_vm" through the TOR browser.
 - **Action:** Multiple successful connections detected.
 
-### 6. File Creation - TOR Shopping List
-
-- **Timestamp:** `2025-06-02T19:49:32.8842030Z`
-- **Event:** The user "employee" created a file named `tor-shopping-list.txt` on the desktop, potentially indicating a list or notes related to their TOR browser activities.
-- **Action:** File creation detected.
-- **File Path:** `C:\Users\ile_vm\Desktop\tor-shopping-list.txt`
-
-# File Download - TOR Installer
-
-| Timestamp                      | Action      | Event                              | Command | Filepath                                                                 | AdditionalInfo |
-|--------------------------------|-------------|------------------------------------|---------|--------------------------------------------------------------------------|----------------|
-| 2025-06-02T19:37:39.6713949Z   | FileRenamed | Tor installer moved to Downloads   |         | `C:\Users\ile_vm\Downloads\tor-browser-windows-x86_64-portable-14.5.3.exe` |                |
-
-# Process Execution - TOR Browser Installation
-
-| Timestamp                      | Action         | Event                          | Command                                                                         | Filepath                                                                 | AdditionalInfo |
-|--------------------------------|----------------|--------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------|----------------|
-| 2025-06-02T19:39:57.6058331Z   | ProcessCreated | Silent install of Tor Browser  | `"C:\Users\ile_vm\Downloads\tor-browser-windows-x86_64-portable-14.5.3.exe /S"` | `C:\Users\ile_vm\Downloads\tor-browser-windows-x86_64-portable-14.5.3.exe` |                |
-
-# Process Execution - TOR Browser Launch
-
-| Timestamp                      | Action         | Event                                    | Command                                                         | Filepath                                                                                         | AdditionalInfo |
-|--------------------------------|----------------|------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------|----------------|
-| 2025-06-02T19:40:48.0832459Z   | ProcessCreated | Launched Tor Browser                     | `"C:\Users\ile_vm\Desktop\Tor Browser\Browser\firefox.exe"`     | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\firefox.exe`                                         |                |
-| 2025-06-02T19:40:51.9230000Z   | ProcessCreated | Spawned Tor Browser subprocesses (tabs, GPU, utility) |                                                                 | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\firefox.exe`                                         |                |
-| 2025-06-02T19:40:52.1230000Z   | ProcessCreated | Started Tor daemon                       | `"C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe --defaults-torrc ..."` | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                         |                |
-
-# Network Connection - TOR Network
-
-| Timestamp                      | Action            | Event                  | Command | Filepath                                                                                                 | AdditionalInfo                                            |
-|--------------------------------|-------------------|------------------------|---------|----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| 2025-06-02T19:41:05.6328746Z   | ConnectionSuccess | Tor relay connection   |         | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                                | RemoteIP = 92.60.37.143:9001                              |
-| 2025-06-02T19:42:13.8842030Z   | ConnectionSuccess | Tor relay connection   |         | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                                | RemoteIP = 176.9.39.196:9001; RemoteURL = `https://www.fs5ld3x5rz4.com` |
-
-# Additional Network Connections - TOR Browser Activity
 
 | Timestamp                      | Action            | Event                  | Command | Filepath                                                                                                 | AdditionalInfo                                                    |
 |--------------------------------|-------------------|------------------------|---------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
@@ -184,7 +173,14 @@ DeviceNetworkEvents
 | 2025-06-02T19:42:08.3020000Z   | ConnectionSuccess | Tor relay connection   |         | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                                | RemoteIP = 217.79.252.202:443                                     |
 | 2025-06-02T19:42:12.1540000Z   | ConnectionSuccess | Tor relay connection   |         | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                                | RemoteIP = 217.79.252.202:443; RemoteURL = `https://www.a2fftavtckqhyk2czvpl.com`   |
 
-# File Creation - TOR Shopping List
+
+### 6. File Creation - TOR Shopping List
+
+- **Timestamp:** `2025-06-02T19:49:32.8842030Z`
+- **Event:** The user "employee" created a file named `tor-shopping-list.txt` on the desktop, potentially indicating a list or notes related to their TOR browser activities.
+- **Action:** File creation detected.
+- **File Path:** `C:\Users\ile_vm\Desktop\tor-shopping-list.txt`
+
 
 | Timestamp                      | Action       | Event                         | Command | Filepath                                            | AdditionalInfo |
 |--------------------------------|--------------|-------------------------------|---------|-----------------------------------------------------|----------------|
