@@ -149,6 +149,50 @@ DeviceNetworkEvents
 - **Action:** File creation detected.
 - **File Path:** `C:\Users\ile_vm\Desktop\tor-shopping-list.txt`
 
+# File Download - TOR Installer
+
+| Timestamp                      | Action      | Event                              | Command | Filepath                                                                 | AdditionalInfo |
+|--------------------------------|-------------|------------------------------------|---------|--------------------------------------------------------------------------|----------------|
+| 2025-06-02T19:37:39.6713949Z   | FileRenamed | Tor installer moved to Downloads   |         | `C:\Users\ile_vm\Downloads\tor-browser-windows-x86_64-portable-14.5.3.exe` |                |
+
+# Process Execution - TOR Browser Installation
+
+| Timestamp                      | Action         | Event                          | Command                                                                         | Filepath                                                                 | AdditionalInfo |
+|--------------------------------|----------------|--------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------|----------------|
+| 2025-06-02T19:39:57.6058331Z   | ProcessCreated | Silent install of Tor Browser  | `"C:\Users\ile_vm\Downloads\tor-browser-windows-x86_64-portable-14.5.3.exe /S"` | `C:\Users\ile_vm\Downloads\tor-browser-windows-x86_64-portable-14.5.3.exe` |                |
+
+# Process Execution - TOR Browser Launch
+
+| Timestamp                      | Action         | Event                                    | Command                                                         | Filepath                                                                                         | AdditionalInfo |
+|--------------------------------|----------------|------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------|----------------|
+| 2025-06-02T19:40:48.0832459Z   | ProcessCreated | Launched Tor Browser                     | `"C:\Users\ile_vm\Desktop\Tor Browser\Browser\firefox.exe"`     | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\firefox.exe`                                         |                |
+| 2025-06-02T19:40:51.9230000Z   | ProcessCreated | Spawned Tor Browser subprocesses (tabs, GPU, utility) |                                                                 | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\firefox.exe`                                         |                |
+| 2025-06-02T19:40:52.1230000Z   | ProcessCreated | Started Tor daemon                       | `"C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe --defaults-torrc ..."` | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                         |                |
+
+# Network Connection - TOR Network
+
+| Timestamp                      | Action            | Event                  | Command | Filepath                                                                                                 | AdditionalInfo                                            |
+|--------------------------------|-------------------|------------------------|---------|----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| 2025-06-02T19:41:05.6328746Z   | ConnectionSuccess | Tor relay connection   |         | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                                | RemoteIP = 92.60.37.143:9001                              |
+| 2025-06-02T19:42:13.8842030Z   | ConnectionSuccess | Tor relay connection   |         | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                                | RemoteIP = 176.9.39.196:9001; RemoteURL = `https://www.fs5ld3x5rz4.com` |
+
+# Additional Network Connections - TOR Browser Activity
+
+| Timestamp                      | Action            | Event                  | Command | Filepath                                                                                                 | AdditionalInfo                                                    |
+|--------------------------------|-------------------|------------------------|---------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| 2025-06-02T19:41:11.4470000Z   | ConnectionSuccess | Tor relay connection   |         | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                                | RemoteIP = 85.208.144.164:443                                     |
+| 2025-06-02T19:42:08.3020000Z   | ConnectionSuccess | Tor relay connection   |         | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                                | RemoteIP = 217.79.252.202:443                                     |
+| 2025-06-02T19:42:12.1540000Z   | ConnectionSuccess | Tor relay connection   |         | `C:\Users\ile_vm\Desktop\Tor Browser\Browser\Tor\tor.exe`                                                | RemoteIP = 217.79.252.202:443; RemoteURL = `https://www.a2fftavtckqhyk2czvpl.com`   |
+
+# File Creation - TOR Shopping List
+
+| Timestamp                      | Action       | Event                         | Command | Filepath                                            | AdditionalInfo |
+|--------------------------------|--------------|-------------------------------|---------|-----------------------------------------------------|----------------|
+| 2025-06-02T19:49:32.8842030Z   | FileCreated  | Created `tor-shopping-list.txt` |         | `C:\Users\ile_vm\Desktop\tor-shopping-list.txt`     |                |
+| 2025-06-02T19:49:32.9900000Z   | FileRenamed  | Renamed/Updated `tor-shopping-list.txt` |         | `C:\Users\ile_vm\Desktop\tor-shopping-list.txt`     |                |
+| 2025-06-02T19:50:04.3020000Z   | FileModified | Edited `tor-shopping-list.txt`  |         | `C:\Users\ile_vm\Desktop\tor-shopping-list.txt`     |                |
+
+
 ---
 
 ## Summary
